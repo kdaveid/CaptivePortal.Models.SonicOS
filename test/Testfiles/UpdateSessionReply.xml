@@ -1,0 +1,6 @@
+<xml version="1.0" encoding="UTF-8"> <SonicWALLAccessGatewayParam
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.sonicwall.com/ SonicWALLAccessGatewayParam.xsd"> <UpdateSessionReply>
+<ResponseCode>210</ResponseCode>
+<ReplyMessage>Session Update succeeded</ReplyMessage>
+</UpdateSessionReply>
+</SonicWALLAccessGatewayParam>

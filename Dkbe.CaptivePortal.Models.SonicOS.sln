@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5320D8DE-43C0-48AB-B7DC-4BC13097D7BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{371FB7E8-B2F0-4DED-8E04-4DDC7DBA9697}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+	EndProjectSection
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Dkbe.CaptivePortal.Models.SonicOS", "src\Dkbe.CaptivePortal.Models.SonicOS\Dkbe.CaptivePortal.Models.SonicOS.xproj", "{E1FC466B-649D-4F7F-9E25-35E20E04B070}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D36073AD-C73A-4D6F-AC92-45462C517C8C}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "CaptivePortal.Models.SonicOS.UnitTests", "test\CaptivePortal.Models.SonicOS.UnitTests.xproj", "{7CD5246A-194C-46C4-8A17-F0DFA1F59176}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1FC466B-649D-4F7F-9E25-35E20E04B070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1FC466B-649D-4F7F-9E25-35E20E04B070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1FC466B-649D-4F7F-9E25-35E20E04B070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1FC466B-649D-4F7F-9E25-35E20E04B070}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD5246A-194C-46C4-8A17-F0DFA1F59176}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD5246A-194C-46C4-8A17-F0DFA1F59176}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD5246A-194C-46C4-8A17-F0DFA1F59176}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD5246A-194C-46C4-8A17-F0DFA1F59176}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E1FC466B-649D-4F7F-9E25-35E20E04B070} = {5320D8DE-43C0-48AB-B7DC-4BC13097D7BA}
+		{7CD5246A-194C-46C4-8A17-F0DFA1F59176} = {D36073AD-C73A-4D6F-AC92-45462C517C8C}
+	EndGlobalSection
+EndGlobal

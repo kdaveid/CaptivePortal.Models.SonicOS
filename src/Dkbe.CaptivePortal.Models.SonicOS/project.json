@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0-*",
+  "authors": [ "David E. Keller" ],
+  "description": "Library containing models to interact with SonicOS by SonicWALL for external authentication",
+
+  "packOptions": {
+    "tags": [ "CaptivePortal", "External Authentication", "SonicWALL", "SonicOS" ],
+    "projectUrl": "https://github.com/kdaveid/CaptivePortal.Models.SonicOS",
+    "licenseUrl": "https://github.com/kdaveid/CaptivePortal.Models.SonicOS/blob/master/LICENSE"
+
+  },
+
+  "dependencies": {
+  },
+
+  "frameworks": {
+    "netstandard1.4": {
+      "dependencies": {
+        "System.Xml.XmlSerializer": "4.3.0"
+      }
+    },
+    "net452": {
+      "frameworkAssemblies": {
+        "System.Xml": "4.0.0.0",
+        "System.Xml.XmlSerializer": "4.0.0"
+      }
+    }
+  }
+}
