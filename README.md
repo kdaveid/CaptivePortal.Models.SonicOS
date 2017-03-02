@@ -2,7 +2,7 @@
 
 Library containing models to interact with SonicOS by SonicWALL for external authentication
 
-[![Build status](https://ci.appveyor.com/api/projects/status/90abajqioudjg1w2/branch/master?svg=true)
+[![Build status](https://ci.appveyor.com/api/projects/status/90abajqioudjg1w2?svg=true)](https://ci.appveyor.com/project/kdaveid/captiveportal-models-sonicos)
 
 This is a model repo for CaptivePortal - but there's more... coming soon!
 
