@@ -3,6 +3,8 @@
 
 namespace Dkbe.CaptivePortal.Models.SonicOS
 {
+    using System.ComponentModel.DataAnnotations;
+
     /// <summary>
     /// Model of HTTP GET redirect from SNWL. This model can be used to parse SNWL request.
     /// </summary>
@@ -11,11 +13,13 @@ namespace Dkbe.CaptivePortal.Models.SonicOS
         /// <summary>
         /// MAC address of device. Required by SonicOS.
         /// </summary>
+        [Required]
         public string MAC { get; set; }
 
         /// <summary>
         /// IP address of device. Required by SonicOS.
         /// </summary>
+        [Required]
         public string IP { get; set; }
 
         /// <summary>
@@ -24,6 +28,7 @@ namespace Dkbe.CaptivePortal.Models.SonicOS
         /// which will be used by the SonicWALL and the WS for indexing clients(e.g.
         /// "11aa3e2f5da3e12ef978ba120d2300ff").
         /// </summary>
+        [Required]
         public string SessionId { get; set; }
 
         /// <summary>

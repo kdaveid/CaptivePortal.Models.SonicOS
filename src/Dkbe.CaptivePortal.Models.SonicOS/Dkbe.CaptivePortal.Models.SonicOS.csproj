@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Description>Library containing models to interact with SonicOS by SonicWALL for external authentication</Description>
+    <Authors>David E. Keller</Authors>
+    <TargetFrameworks>netstandard1.4;net452</TargetFrameworks>
+    <AssemblyName>Dkbe.CaptivePortal.Models.SonicOS</AssemblyName>
+    <PackageId>Dkbe.CaptivePortal.Models.SonicOS</PackageId>
+    <PackageTags>CaptivePortal;External Authentication;SonicWALL;SonicOS</PackageTags>
+    <PackageProjectUrl>https://github.com/kdaveid/CaptivePortal.Models.SonicOS</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/kdaveid/CaptivePortal.Models.SonicOS/blob/master/LICENSE</PackageLicenseUrl>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <Version>1.1.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.4' ">
+    <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.XmlSerializer" />
+    <Reference Include="System" />
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

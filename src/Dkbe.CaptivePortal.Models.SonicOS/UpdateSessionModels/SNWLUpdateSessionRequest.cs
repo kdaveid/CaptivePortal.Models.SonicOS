@@ -4,6 +4,7 @@
 namespace Dkbe.CaptivePortal.Models.SonicOS
 {
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
 
     /// <summary>
     /// Request model for update client session. Used in HTTP POST request to SNWL.
@@ -14,16 +15,19 @@ namespace Dkbe.CaptivePortal.Models.SonicOS
         /// <summary>
         /// Session id of client. Required by SonicOS.
         /// </summary>
+        [Required]
         public string sessID { get; set; }
 
         /// <summary>
         /// User name of client. Required by SonicOS.
         /// </summary>
+        [Required]
         public string userName { get; set; }
 
         /// <summary>
         /// New session life time for client in seconds. Required by SonicOS.
         /// </summary>
+        [Required]
         public long sessionLifetime { get; set; }
 
         /// <summary>
