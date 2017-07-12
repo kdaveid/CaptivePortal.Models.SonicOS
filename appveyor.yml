@@ -55,3 +55,11 @@ test_script:
 
 artifacts:
   - path: '**\Dkbe.CaptivePortal.Models.SonicOS.*.nupkg' # find all NuGet packages recursively
+  
+deploy:
+  provider: NuGet
+  api_key:
+    secure: fte4jpnomkomjvugs24tqtn7
+  skip_symbols: false
+  symbol_server:           # remove to push symbols to SymbolSource.org
+  artifact: /.*\.nupkg/
