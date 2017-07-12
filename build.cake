@@ -16,6 +16,8 @@ var packPath            = Directory("./src/Dkbe.CaptivePortal.Models.SonicOS");
 
 var sourcePath          = Directory("./src");
 
+var solutionPath		= string.Concat(Directory("."), "/Dkbe.CaptivePortal.Models.SonicOS.sln");
+
 var testsPath           = Directory("test");
 
 var buildArtifacts      = Directory("./artifacts/packages");
@@ -32,7 +34,7 @@ Task("Build")
 
 {
 
-	var projects = GetFiles("./**/project.json");
+	var projects = GetFiles("./**/*.csproj");
 
 
 
@@ -68,13 +70,14 @@ Task("RunTests")
 
 {
 
-    var projects = GetFiles("./test/**/project.json");
+    var projects = GetFiles("./test/**/*.csproj");
 
 
 
     foreach(var project in projects)
-
 	{
+
+		Information(string.Concat("Running tests for ", project.FullPath));
 
         var settings = new DotNetCoreTestSettings
 
@@ -97,8 +100,7 @@ Task("RunTests")
         }
 
 
-
-        DotNetCoreTest(project.GetDirectory().FullPath, settings);
+        DotNetCoreTest(project.FullPath, settings);
 
     }
 
@@ -163,21 +165,12 @@ Task("Restore")
     .Does(() =>
 
 {
+	var settings = new NuGetRestoreSettings
+	{
+		Source = new [] {"https://api.nuget.org/v3/index.json"}
+	};
 
-    var settings = new DotNetCoreRestoreSettings
-
-    {
-
-        Sources = new [] { "https://api.nuget.org/v3/index.json" }
-
-    };
-
-
-
-    DotNetCoreRestore(sourcePath, settings);
-
-    DotNetCoreRestore(testsPath, settings);
-
+	NuGetRestore(solutionPath, settings);
 });
 
 
