@@ -6,11 +6,11 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{5320D8DE-43C0-48AB-B7DC-4BC13097D7BA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{371FB7E8-B2F0-4DED-8E04-4DDC7DBA9697}"
-	ProjectSection(SolutionItems) = preProject
+ProjectSection(SolutionItems) = preProject
 		build.cake = build.cake
 		build.ps1 = build.ps1
 		build.sh = build.sh
-	EndProjectSection
+EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D36073AD-C73A-4D6F-AC92-45462C517C8C}"
 EndProject
