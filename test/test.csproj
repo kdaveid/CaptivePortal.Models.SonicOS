@@ -7,9 +7,9 @@
     <PackageId>test</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <RuntimeFrameworkVersion>1.1.1</RuntimeFrameworkVersion>
-    <Configurations>Debug;Release;DebugNETSTANDARD1_0</Configurations>
+    <Configurations>Debug;Release;DebugNETSTANDARD1_1;DebugNETSTANDARD2_0</Configurations>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <None Update="Testfiles\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
