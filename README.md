@@ -9,7 +9,10 @@ This is a model repo for CaptivePortal - but there's more... coming soon!
 
 ### Platform
 
-This library is built against [.NET Standard 1.4](https://docs.microsoft.com/en-us/nuget/schema/target-frameworks#net-platform-standard).
+This library is built against the following [.NET Standards](https://docs.microsoft.com/en-us/nuget/schema/target-frameworks#net-platform-standard):
+- .NETSTANDARD1.1
+- .NETSTANDARD1.3
+- .NETSTANDARD2.0
 
 Also we are staying on the project.json based tooling until Visual Studio 2017 has been released - IOW you need to use Visual Studio
 Update 3 with the preview ASP.NET Core tooling.
