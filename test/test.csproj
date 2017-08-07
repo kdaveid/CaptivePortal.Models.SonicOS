@@ -1,15 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TargetFramework>net461</TargetFramework>
     <DebugType>portable</DebugType>
     <AssemblyName>test</AssemblyName>
     <PackageId>test</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
     <RuntimeFrameworkVersion>1.1.1</RuntimeFrameworkVersion>
-    <Configurations>Debug;Release;DebugNETSTANDARD1_1;DebugNETSTANDARD2_0</Configurations>
+    <Configurations>Debug;Release</Configurations>
+    <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
-  
+
   <ItemGroup>
     <None Update="Testfiles\*.*">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

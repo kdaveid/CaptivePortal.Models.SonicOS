@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Library containing models to interact with SonicOS by SonicWALL for external authentication</Description>
     <Authors>David E. Keller</Authors>
-    <TargetFrameworks>netstandard1.1;netstandard1.3;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>netstandard1.1;netstandard1.3;netstandard2.0;net461</TargetFrameworks>
     <AssemblyName>Dkbe.CaptivePortal.Models.SonicOS</AssemblyName>
     <PackageId>Dkbe.CaptivePortal.Models.SonicOS</PackageId>
     <PackageTags>CaptivePortal;External Authentication;SonicWALL;SonicOS</PackageTags>
@@ -12,35 +12,48 @@
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <Version>1.1.1</Version>
-    <Configurations>Debug;Release;DebugNETSTANDARD1.1;DebugNETSTANDARD2.0</Configurations>
+    <Version>1.1.2</Version>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(Configuration)' == 'DebugNETSTANDARD1_1'">
-    <TargetFrameworks>netstandard1.1</TargetFrameworks>
-    <Configurations>DebugNETSTANDARD1_1;Release</Configurations>
-  </PropertyGroup>
-  
-  <PropertyGroup Condition=" '$(Configuration)' == 'DebugNETSTANDARD2_0'">
-    <TargetFrameworks>netstandard2.0</TargetFrameworks>
-    <Configurations>DebugNETSTANDARD2_0;Release</Configurations>
-  </PropertyGroup>
+  <!--<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net461|AnyCPU'" />
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard1.1|AnyCPU'" />
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netstandard2.0|AnyCPU'" />
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net461|AnyCPU'" />
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard1.1|AnyCPU'" />
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|netstandard2.0|AnyCPU'" />-->
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1' OR  '$(TargetFramework)' == 'netstandard1.3'">
-    <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
-  </ItemGroup>
+  <Choose>
+    <!-- FULL -->
+    <When Condition="'$(TargetFramework)'=='net461'">
+      <ItemGroup>
+        <Reference Include="System.ComponentModel.DataAnnotations" />
+      </ItemGroup>
+    </When>
 
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.1'">
-    <PackageReference Include="Microsoft.CSharp" Version="4.3.0" />
-  </ItemGroup>
-  
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
-    <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
-  </ItemGroup>
+    <!-- NETSTANDARD 1.1 -->
+    <When Condition="'$(TargetFramework)' == 'netstandard1.1'">
+      <ItemGroup>
+        <PackageReference Include="Microsoft.CSharp" Version="4.3.0" />
+        <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
+        <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+      </ItemGroup>
+    </When>
 
-  <ItemGroup>
-    
-  </ItemGroup>
+    <!-- NETSTANDARD 1.3 -->
+    <When Condition="'$(TargetFramework)' == 'netstandard1.3'">
+      <ItemGroup>
+        <PackageReference Include="Microsoft.CSharp" Version="4.3.0" />
+        <PackageReference Include="System.Xml.XmlSerializer" Version="4.3.0" />
+        <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+      </ItemGroup>
+    </When>
 
+    <!-- NETSTANDARD 2.0 -->
+    <When Condition="'$(TargetFramework)'=='netstandard2.0'">
+      <ItemGroup>
+        <PackageReference Include="System.ComponentModel.Annotations" Version="4.3.0" />
+      </ItemGroup>
+    </When>
+  </Choose>
 </Project>
