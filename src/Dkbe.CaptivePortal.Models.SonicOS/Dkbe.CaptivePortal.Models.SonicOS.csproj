@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Description>Library containing models to interact with SonicOS by SonicWALL for external authentication</Description>
     <Authors>David E. Keller</Authors>
-    <TargetFrameworks>netstandard1.1;netstandard1.3;netstandard2.0;net461</TargetFrameworks>
+    <TargetFrameworks>netstandard1.1;netstandard1.3;netstandard2.0;net461;net46</TargetFrameworks>
     <AssemblyName>Dkbe.CaptivePortal.Models.SonicOS</AssemblyName>
     <PackageId>Dkbe.CaptivePortal.Models.SonicOS</PackageId>
     <PackageTags>CaptivePortal;External Authentication;SonicWALL;SonicOS</PackageTags>
@@ -25,7 +25,7 @@
 
   <Choose>
     <!-- FULL -->
-    <When Condition="'$(TargetFramework)'=='net461'">
+    <When Condition="'$(TargetFramework)'=='net461' or '$(TargetFramework)'=='net46'">
       <ItemGroup>
         <Reference Include="System.ComponentModel.DataAnnotations" />
       </ItemGroup>
